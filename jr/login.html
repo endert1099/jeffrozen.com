@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="logindata.js" type="method"></script>
+        <script>
+            import logins from
+            function checkLogin() {
+                var user = document.getElementById("username");
+                var passw = document.getElementById("password");
+                user = user.value;
+                passw = passw.value;
+
+                if(user == logins.admin.username && passw == logins.admin.password) {
+                    window.open("index.html", "_self");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!--Send Login Data to logindata.js for processing-->
+        <label>Username:</label>
+        <input type="text" id="username">
+        <br>
+        <label>Password:</label>
+        <input type="password" id="password">
+        <br>
+        <button onclick="checkLogin()">Login</button>
+    </body>
+</html
